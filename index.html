@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NLL NVIDIA Store</title>
+ <link rel="icon" type="image/jpeg" href="images/logo%20title.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="custom-logo">
+    <span class="logo-icon">💻</span>
+    <div class="logo-text">
+      <span class="brand">NLL</span>
+      <span class="sub">GPU</span>
+    </div>
+  </div>
+  <nav>
+    <button class="category-btn active" data-cat="all">Trang Chủ</button>
+    <button class="category-btn" data-cat="rtx-30">RTX 30 Series</button>
+    <button class="category-btn" data-cat="rtx-40">RTX 40 Series</button>
+    <button class="category-btn" data-cat="rtx-50">RTX 50 Series</button>
+    <button class="category-btn" data-cat="phu-kien">Phụ Kiện PC</button>
+    <button id="btn-cart" onclick="toggleCart()">Giỏ Hàng (<span id="cart-count">0</span>)</button>
+  </nav>
+</header>
+
+<div id="homepage-banner">
+  <marquee behavior="scroll" direction="left" scrollamount="12">
+    <span class="flash-text">🎉 SIÊU SALE VGA 12/12</span> – Giảm giá khủng toàn bộ card đồ họa – Tính phí vận chuyển toàn quốc 🚚 🎉
+  </marquee>
+</div>
+<!-- KHUNG GIỎ HÀNG DUY NHẤT -->
+<div id="cart">
+  <h2>Giỏ Hàng</h2>
+  
+  <div id="cart-total">Tổng tiền: 0₫</div>
+  
+  <ul id="cart-items"></ul>
+
+  <div id="payment-section">
+    <label for="payment-method">Chọn phương thức thanh toán:</label>
+    <select id="payment-method">
+      <option value="">-- Chọn --</option>
+      <option value="bank">Ngân hàng</option>
+      <option value="momo">MoMo</option>
+    </select>
+    <div class="bank-details" id="bank-details">
+      <label for="bank-account-name">Tên chủ tài khoản:</label>
+      <input type="text" id="bank-account-name" placeholder="Nhập tên chủ tài khoản" />
+      <label for="bank-account-number">Số tài khoản ngân hàng:</label>
+      <input type="text" id="bank-account-number" placeholder="Nhập số tài khoản" />
+    </div>
+    <button id="btn-checkout">Thanh Toán</button>
+    <div id="payment-summary"></div>
+  </div>
+
+  <button id="cart-close" onclick="toggleCart()">Đóng</button>
+</div>
+
+<main>
+  <h2 id="category-title">Flash Sale – Giá cực rẻ – Mua 1 tặng 1 tính tiền 3</h2>
+
+  <div id="flash-sale-timer"></div>
+  <div class="book-list" id="book-list"></div>
+
+  <div class="extra-section" id="best-seller-section">
+    <h2>📈 Card Đồ Họa Bán Chạy</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-nav carousel-prev" id="bs-prev">‹</button>
+      <div class="carousel-track" id="best-seller-list"></div>
+      <button class="carousel-nav carousel-next" id="bs-next">›</button>
+    </div>
+  </div>
+
+  <div class="extra-section" id="featured-section">
+    <h2>🌟 GPU Nổi Bật & Hiệu Năng Cao</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-nav carousel-prev" id="ft-prev">‹</button>
+      <div class="carousel-track" id="featured-list"></div>
+      <button class="carousel-nav carousel-next" id="ft-next">›</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>NLL GPU Store</h4>
+      <p>Địa chỉ: NLL ( GOOGLE MAP )</p>
+      <p>Hotline: 0989505501</p>
+      <p>Email: bietnllhong@gmail.com</p>
+    </div>
+    <div>
+      <h4>Hỗ trợ khách hàng</h4>
+      <ul>
+        <li><a href="#">Chính sách bảo hành</a></li>
+        <li><a href="#">Chính sách đổi trả VGA</a></li>
+        <li><a href="#">Câu hỏi thường gặp</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kết nối</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Tải ứng dụng: Google Play | App Store</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; NLL GPU REFORCE NVIDIA. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
